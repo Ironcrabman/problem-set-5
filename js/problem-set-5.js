@@ -28,7 +28,7 @@ function mario() {
 
   // WRITE YOUR EXERCISE 1 CODE HERE
 height = prompt("Please Enter an integer number between 1 and 23");
- If(height > 23 || height < 1 || height == NaN) {
+ if(height > 23 || height < 1 || height == NaN) {
   while(height > 23 || height < 1 || height || height == NaN){
   height = prompt("Please enter in a VALID whole integer between 1 and 23");
   }
