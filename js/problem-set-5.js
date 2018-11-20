@@ -28,9 +28,11 @@ function mario() {
 
   // WRITE YOUR EXERCISE 1 CODE HERE
 height = prompt("Please Enter an integer number between 1 and 23");
-while(height !== 1 || height !== 2 || height !== 3 || height !== 4 || height !== 5 || height !== 6 || height !== 7 || height !== 8 || height !== 9 || height !== 10 || height !== 11 || height !== 12 || height !== 13 || height !== 14 || height !== 15 || height !== 16 || height !== 17 || height !== 18 || height !== 19 || height !== 20 || height !== 21 || height !== 22 || height !== 23) {
-  height = prompt("Please enter an INTEGER between 1 and 23");
-}
+ If(height > 23 || height < 1 || height == NaN || height !== ) {
+  while(height > 23 || height < 1 || height || height == NaN){
+  height = prompt("Please enter in a VALID whole integer between 1 and 23");
+  }
+  }
 var p=document.getElementById("mario-easy-output");
 p.innerHTML=`${height}`;
   ////////////////////////// DO NOT MODIFY
