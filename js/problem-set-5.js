@@ -32,7 +32,7 @@ height = prompt("Please Enter an integer number between 1 and 23");
   while(height > 23 || height < 1 || height || height == NaN){
   height = prompt("Please enter in a VALID whole integer between 1 and 23");
   }
-  }
+ }
 var p=document.getElementById("mario-easy-output");
 p.innerHTML=`${height}`;
   ////////////////////////// DO NOT MODIFY
