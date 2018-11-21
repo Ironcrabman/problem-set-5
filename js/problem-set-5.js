@@ -39,7 +39,7 @@ height = prompt("Please Enter an integer number between 1 and 23");
       }
     
     var p=document.getElementById("mario-easy-output");
-    p.innerHTML=`${row}`;
+    p.innerHTML=`${row}<br/>`;
   }
   
   ////////////////////////// DO NOT MODIFY
