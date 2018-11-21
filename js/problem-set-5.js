@@ -31,8 +31,15 @@ height = prompt("Please Enter an integer number between 1 and 23");
   while(height > 23 || height < 1 || height % 1 != 0){
   height = prompt("Please enter in a VALID whole integer between 1 and 23");
  }
+  for(let i=1; i <= height; i++){
+    let row = ` `
+  for(let j=1; j <= i; j++){
+    row += `#`
+    }
+  }
+  
 var p=document.getElementById("mario-easy-output");
-p.innerHTML=`${height}`;
+p.innerHTML=`${row}`;
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
