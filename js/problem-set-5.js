@@ -31,17 +31,6 @@ height = prompt("Please Enter an integer number between 1 and 23");
   while(height > 23 || height < 1 || height % 1 != 0){
   height = prompt("Please enter in a VALID whole integer between 1 and 23");
  }
-  while(let i = 1; i <= height; i++){
-    let row = ' ';
-    
-    for(let j=1; j <= i; j++){
-      row += '#';
-      }
-    
-    var p=document.getElementById("mario-easy-output");
-    p.innerHTML=`${row}<br/>`;
-  }
-  
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -203,7 +192,36 @@ function hurricane() {
   ///////////////// DO NOT MODIFY
   let windspeed; // DO NOT MODIFY
   ///////////////// DO NOT MODIFY
+  windspeed = prompt(`Please enter the wind speed in MPH as a nonnegative integer`);
+ while(windspeed % 1 != 0 || windspeed < 0) {
+   windspeed = prompt(`Please enter the wind speed in MPH as a NONNEGATIVE INTEGER`)
+ }
+let temp = parseInt(windspeed, 10);
 
+ if(windspeed < 39) {
+   windspeed =`The skies are calm...`}
+if(windspeed >= 39  && windspeed <= 73){
+  windspeed=`Tropical Storm.`
+}
+if(windspeed >= 74 && windspeed <= 95 ){
+  windspeed=`Category 1.`
+}
+if(windspeed >= 96 && windspeed <= 110 ){
+  windspeed=`Category 2.`
+}
+if(windspeed >= 111  && windspeed <= 129 ){
+  windspeed=`Category 3.`
+}
+if(windspeed >= 130 && windspeed <= 156 ){
+  windspeed=`Category 4.`
+}
+if(windspeed >= 157){
+  windspeed=`Category 5.`
+}
+ let p =document.getElementById("hurricane-output")
+ p.innerHTML = windspeed
+
+windspeed = temp
   ///////////////////////////////// DO NOT MODIFY
   check('hurricane', windspeed); // DO NOT MODIFY
   ///////////////////////////////// DO NOT MODIFY
@@ -233,7 +251,45 @@ function gymnastics() {
   let total = 0; //// DO NOT MODIFY
   let scores = []; // DO NOT MODIFY
   /////////////////// DO NOT MODIFY
+let s1 = prompt(`Please enter the 1st judge scores between 0.0 and 10.0`);
+while(s1 < 0 || s1 > 10) {
+  s1 = prompt(`Please enter a valid score between 0.0 and 10.0`)
+}
+scores.push(s1);
 
+let s2 = prompt(`Please enter the 2nd judge scores between 0.0 and 10.0`);
+while(s2 < 0 || s2 > 10){
+  s2 = prompt(`Please enter a valid score between 0.0 and 10.0`)
+}
+scores.push(s2);
+
+let s3 = prompt(`Please enter the 3rd judge scores between 0.0 and 10.0`);
+while(s3 < 0 || s3 > 10){
+  s3 = prompt(`Please enter a valid score between 0.0 and 10.0`)
+}
+scores.push(s3);
+
+let s4 = prompt(`Please enter the 4th judge scores between 0.0 and 10.0`);
+while(s4 < 0 || s4 > 10){
+  s4 = prompt(`Please enter a valid score between 0.0 and 10.0`)
+}
+scores.push(s4);
+
+let s5 = prompt(`Please enter the 5th judge scores between 0.0 and 10.0`);
+while(s5 < 0 || s5 > 10){
+  s5 = prompt(`Please enter a valid score between 0.0 and 10.0`)
+}
+scores.push(s5);
+
+let s6 = prompt(`Please enter the 6th judge scores between 0.0 and 10.0`);
+while(s6 < 0 || s6 > 10){
+  s6 = prompt(`Please enter a valid score between 0.0 and 10.0`)
+}
+scores.push(s6);
+
+for(let i = 0; i < 5)
+/////Finsh this loop
+total = s1 + s2 + s3 + s4 + s5 + s6
   /*
    * NOTE: The 'total' variable should be representative of the sum of all
    *       six of the judges' scores.
