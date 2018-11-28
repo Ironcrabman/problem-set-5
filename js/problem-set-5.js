@@ -255,41 +255,58 @@ let s1 = prompt(`Please enter the 1st judge scores between 0.0 and 10.0`);
 while(s1 < 0 || s1 > 10) {
   s1 = prompt(`Please enter a valid score between 0.0 and 10.0`)
 }
+s1 = parseInt(s1, 10);
 scores.push(s1);
 
 let s2 = prompt(`Please enter the 2nd judge scores between 0.0 and 10.0`);
 while(s2 < 0 || s2 > 10){
   s2 = prompt(`Please enter a valid score between 0.0 and 10.0`)
 }
+
+s2 = parseInt(s2, 10);
 scores.push(s2);
 
 let s3 = prompt(`Please enter the 3rd judge scores between 0.0 and 10.0`);
 while(s3 < 0 || s3 > 10){
   s3 = prompt(`Please enter a valid score between 0.0 and 10.0`)
 }
+s3 = parseInt(s3, 10);
 scores.push(s3);
 
 let s4 = prompt(`Please enter the 4th judge scores between 0.0 and 10.0`);
 while(s4 < 0 || s4 > 10){
   s4 = prompt(`Please enter a valid score between 0.0 and 10.0`)
 }
+s4 = parseInt(s4, 10);
 scores.push(s4);
 
 let s5 = prompt(`Please enter the 5th judge scores between 0.0 and 10.0`);
 while(s5 < 0 || s5 > 10){
   s5 = prompt(`Please enter a valid score between 0.0 and 10.0`)
 }
+s5 = parseInt(s5, 10);
 scores.push(s5);
 
 let s6 = prompt(`Please enter the 6th judge scores between 0.0 and 10.0`);
 while(s6 < 0 || s6 > 10){
   s6 = prompt(`Please enter a valid score between 0.0 and 10.0`)
 }
+s6 = parseInt(s6, 10);
 scores.push(s6);
 
-for(let i = 0; i < 5)
-/////Finsh this loop
 total = s1 + s2 + s3 + s4 + s5 + s6
+let min = Math.min(s1, s2, s3, s4, s5, s6,);
+let max = Math.max(s1, s2, s3, s4, s5, s6);
+
+average =(total-(min+max)) / 4;
+average = average.toFixed(2);
+
+removed = `${min}, ${max}`;
+let p =document.getElementById("gymnastics-output");
+p.innerHTML = `Discarded: ${removed}<br/>Score: ${average}`;
+
+
+/////Finsh this loop
   /*
    * NOTE: The 'total' variable should be representative of the sum of all
    *       six of the judges' scores.
@@ -354,6 +371,17 @@ function reportCard() {
    *       representative of the number of tests, quizzes, and homework
    *       grades the user enters, respectively.
    */
+let i = 0
+
+  for(let homework = prompt(`Please enter your homework grades between 0.0 and 100.0 when done enter -1`); homework != -1, i++){
+    if (homework < 0 || homework > 100.0)
+  homework = parseInt(homework, 10);
+  (homeworkTotal= homework + 0)
+}
+   for(let i = 0;  i != -1, i++){
+
+   }
+   while(s1 < 0 || s1 > 100.0) {
 
   /////////////////////// DO NOT MODIFY
   check('report-card', // DO NOT MODIFY
