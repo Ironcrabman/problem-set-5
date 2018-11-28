@@ -371,17 +371,30 @@ function reportCard() {
    *       representative of the number of tests, quizzes, and homework
    *       grades the user enters, respectively.
    */
-let i = 0
-
-  for(let homework = prompt(`Please enter your homework grades between 0.0 and 100.0 when done enter -1`); homework != -1, i++){
-    if (homework < 0 || homework > 100.0)
-  homework = parseInt(homework, 10);
-  (homeworkTotal= homework + 0)
+let testadd
+  for (testadd = 0; testadd != -1; testTotal = testTotal + testadd) {
+    testadd = prompt(`Enter your test grades between 0.0 and 100.0 when you are done enter "-1"`)
+    while (testadd < 0 && testadd != -1 || testadd > 100.0){
+      testadd = prompt(`Enter your test grades BETWEEN 0.0 and 100.0 when you are done enter "-1"`)
+    }
+    testadd = parseInt(testadd, 10);
+    tests = tests + 1
 }
-   for(let i = 0;  i != -1, i++){
 
-   }
-   while(s1 < 0 || s1 > 100.0) {
+let quizadd
+  for (quizadd = 0; quizadd != -1; quizTotal = quizTotal + quizadd) {
+    quizadd = prompt(`Enter your quiz grades between 0.0 and 100.0 when you are done enter "-1"`)
+    while (quizadd < 0 && quizadd != -1 || quizadd > 100.0){
+      quizadd = prompt(`Enter your quiz grades BETWEEN 0.0 and 100.0 when you are done enter "-1"`)
+    }
+    quizadd = parseInt(quizadd, 10);
+    quizzes = quizzes + 1
+}
+
+let testaverage = testTotal / tests
+let quizaverage = quizTotal / quizzes
+let p =document.getElementById("report-card-output");
+p.innerHTML =`Tests: ${testaverage}<br/>Quizzes: ${quizaverage}`;
 
   /////////////////////// DO NOT MODIFY
   check('report-card', // DO NOT MODIFY
