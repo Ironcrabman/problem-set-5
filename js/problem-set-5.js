@@ -393,6 +393,7 @@ let quizadd
 
 let testaverage = testTotal / tests
 let quizaverage = quizTotal / quizzes
+testaverage = parseInt(testaverage, 10);
 let p =document.getElementById("report-card-output");
 p.innerHTML =`Tests: ${testaverage}<br/>Quizzes: ${quizaverage}`;
 
