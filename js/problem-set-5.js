@@ -378,7 +378,12 @@ let testadd
       testadd = prompt(`Enter your test grades BETWEEN 0.0 and 100.0 when you are done enter "-1"`)
     }
     testadd = parseInt(testadd, 10);
-    tests = tests + 1
+    if(testadd = -1){
+    testTotal = testTotal + 1
+    }
+    else{
+      tests = tests + 1
+    }
 }
 
 let quizadd
