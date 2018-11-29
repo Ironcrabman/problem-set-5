@@ -395,7 +395,7 @@ let testaverage = testTotal / tests
 let quizaverage = quizTotal / quizzes
 testaverage = parseInt(testaverage, 10);
 let p =document.getElementById("report-card-output");
-p.innerHTML =`Tests: ${testaverage}<br/>Quizzes: ${quizaverage}`;
+p.innerHTML =`Tests: ${testaverage} ${tests}<br/>Quizzes: ${quizaverage}`;
 
   /////////////////////// DO NOT MODIFY
   check('report-card', // DO NOT MODIFY
