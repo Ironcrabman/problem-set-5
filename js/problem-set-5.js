@@ -382,12 +382,7 @@ let testadd
       testadd = prompt(`Enter your test grades BETWEEN 0.0 and 100.0 when you are done enter "-1"`)
     }
     testadd = parseInt(testadd, 10);
-    if(testadd = -1){
-    testTotal = testTotal + 1
-    }
-    else{
       tests = tests + 1
-    }
 }
 
 let quizadd
@@ -397,12 +392,7 @@ let quizadd
       quizadd = prompt(`Enter your quiz grades BETWEEN 0.0 and 100.0 when you are done enter "-1"`)
     }
     quizadd = parseInt(quizadd, 10);
-    if(quizadd = -1){
-    quizTotal = quizTotal + 1
-    }
-    else{
       quizzes = quizzes + 1
-    }  
 }
 
 let testaverage = testTotal / tests
