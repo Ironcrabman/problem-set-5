@@ -204,19 +204,19 @@ if(windspeed >= 39  && windspeed <= 73){
   windspeed=`Tropical Storm.`
 }
 if(windspeed >= 74 && windspeed <= 95 ){
-  windspeed=`Category 1.`
+  windspeed=`Category 1 Hurricane.`
 }
 if(windspeed >= 96 && windspeed <= 110 ){
-  windspeed=`Category 2.`
+  windspeed=`Category 2 Hurricane.`
 }
 if(windspeed >= 111  && windspeed <= 129 ){
-  windspeed=`Category 3.`
+  windspeed=`Category 3 Hurricane.`
 }
 if(windspeed >= 130 && windspeed <= 156 ){
-  windspeed=`Category 4.`
+  windspeed=`Category 4 Hurricane.`
 }
 if(windspeed >= 157){
-  windspeed=`Category 5.`
+  windspeed=`Category 5 Hurricane.`
 }
  let p =document.getElementById("hurricane-output")
  p.innerHTML = windspeed
@@ -371,10 +371,12 @@ function reportCard() {
    *       representative of the number of tests, quizzes, and homework
    *       grades the user enters, respectively.
    */
-  
-  tests = -1
-  
-  
+
+  tests = -1;
+  quizzes = -1;
+  homeworks = -1;
+
+
 let testadd
   for (testadd = 0; testadd != -1; testTotal = testTotal + testadd) {
     testadd = prompt(`Enter your test grades between 0.0 and 100.0 when you are done enter "-1"`)
@@ -384,7 +386,7 @@ let testadd
     testadd = parseInt(testadd, 10);
       tests = tests + 1
     if (testadd === -1) {
-     testTotal++ 
+     testTotal++
     }
 }
 
@@ -401,11 +403,31 @@ let quizadd
     }
 }
 
+
+let homeworkadd
+  for (homeworkadd = 0; homeworkadd != -1; homeworkTotal = homeworkTotal + homeworkadd) {
+    homeworkadd = prompt(`Enter your homework grades between 0.0 and 100.0 when you are done enter "-1"`)
+    while (homeworkadd < 0 && homeworkadd != -1 || homeworkadd > 100.0){
+      homeworkadd = prompt(`Enter your homework grades BETWEEN 0.0 and 100.0 when you are done enter "-1"`)
+    }
+    homeworkadd = parseInt(homeworkadd, 10);
+      homeworks = homeworks + 1
+    if (homeworkadd === -1) {
+      homeworkTotal++
+    }
+}
+
+
 let testaverage = testTotal / tests
 let quizaverage = quizTotal / quizzes
-testaverage = parseInt(testaverage, 10);
+let homeworkaverage = homeworkTotal / homeworks
+testaverage = parseInt(testaverage, 10).toFixed(2);
+quizaverage = parseInt(quizaverage, 10).toFixed(2);
+homeworkaverage = parseInt(homeworkaverage, 10).toFixed(2);
+let grade = (testaverage * 0.6) + (quizaverage * 0.3) + (homeworkaverage * 0.1)
+grade = parseInt(grade, 10).toFixed(2);
 let p =document.getElementById("report-card-output");
-p.innerHTML =`Tests: ${testaverage} ${tests}<br/>Quizzes: ${quizaverage} ${quizzes}`;
+p.innerHTML =`Tests: ${testaverage}<br/>Quizzes: ${quizaverage}<br/>Homework: ${homeworkaverage}<br/>Grade: ${grade}`;
 
   /////////////////////// DO NOT MODIFY
   check('report-card', // DO NOT MODIFY
