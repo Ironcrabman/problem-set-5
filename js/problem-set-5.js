@@ -383,6 +383,9 @@ let testadd
     }
     testadd = parseInt(testadd, 10);
       tests = tests + 1
+    if (testadd === -1) {
+     testTotal++ 
+    }
 }
 
 let quizadd
@@ -393,7 +396,7 @@ let quizadd
     }
     quizadd = parseInt(quizadd, 10);
       quizzes = quizzes + 1
-    if quizadd === -1 {
+    if (quizadd === -1) {
       quizTotal++
     }
 }
