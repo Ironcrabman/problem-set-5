@@ -27,10 +27,50 @@ function mario() {
   ////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 1 CODE HERE
-height = prompt("Please Enter an integer number between 1 and 23");
-  while(height > 23 || height < 1 || height % 1 != 0){
-  height = prompt("Please enter in a VALID whole integer between 1 and 23");
- }
+
+let i = 1;
+let hash = `##`;
+let space = ``;
+
+while (height < 1 || height > 23 || height % 1  != 0) {
+  height = prompt("Enter an integer from 1 to 23 for the height");
+}
+
+height = Number(height)
+
+while (i < height) {
+  space = space + `&nbsp`;
+  i++
+}
+
+let output = space + hash +`<br/>`;
+let h = 1; ///// For Hashtags
+let s = 1; ///// For Spaces
+let lspace= `&nbsp`;
+let hold = 1;
+
+while (h < (height--)) {
+  hash = hash + `#`;
+  while (s <(height - 2)) {
+    lspace = lspace + `&nbsp`;
+    s++;
+  }
+
+output = output + lspace + hash + `<br/>`;
+lspace = `&nbsp`;
+s = hold++;
+hold = hold++;
+h = h++
+}
+
+while (h < height) {
+  hash = hash + `#`;
+  output = output + hash + `<br/>`;
+  h = h++
+}
+
+let p = document.getElementById('mario-easy-output');
+p.innerHTML= `<code>` + output + `</code>`;
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -421,11 +461,11 @@ let homeworkadd
 let testaverage = testTotal / tests
 let quizaverage = quizTotal / quizzes
 let homeworkaverage = homeworkTotal / homeworks
-testaverage = parseInt(testaverage, 10).toFixed(2);
-quizaverage = parseInt(quizaverage, 10).toFixed(2);
+testaverage = Number(testaverage).toFixed(2);
+quizaverage = Number(quizaverage).toFixed(2);
 homeworkaverage = parseInt(homeworkaverage, 10).toFixed(2);
 let grade = (testaverage * 0.6) + (quizaverage * 0.3) + (homeworkaverage * 0.1)
-grade = parseInt(grade, 10).toFixed(2);
+grade = grade.toFixed(2);
 let p =document.getElementById("report-card-output");
 p.innerHTML =`Tests: ${testaverage}<br/>Quizzes: ${quizaverage}<br/>Homework: ${homeworkaverage}<br/>Grade: ${grade}`;
 
