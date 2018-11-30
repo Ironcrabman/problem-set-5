@@ -393,6 +393,7 @@ let quizadd
     }
     quizadd = parseInt(quizadd, 10);
       quizzes = quizzes + 1
+    if quizadd === 1
 }
 
 let testaverage = testTotal / tests
