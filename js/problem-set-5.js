@@ -28,49 +28,32 @@ function mario() {
 
   // WRITE YOUR EXERCISE 1 CODE HERE
 
-let i = 1;
-let hash = `##`;
-let space = ``;
 
 while (height < 1 || height > 23 || height % 1  != 0) {
   height = prompt("Enter an integer from 1 to 23 for the height");
 }
 
-height = Number(height)
+height = Number(height);
+  
+let i = 1;
+let block = `#`;
+let space = height - 2;
+let hold
+let code = `<code>`
 
-while (i < height) {
-  space = space + `&nbsp`;
-  i++
-}
-
-let output = space + hash +`<br/>`;
-let h = 1; ///// For Hashtags
-let s = 1; ///// For Spaces
-let lspace= `&nbsp`;
-let hold = 1;
-
-while (h < (height--)) {
-  hash = hash + `#`;
-  while (s <(height - 2)) {
-    lspace = lspace + `&nbsp`;
-    s++;
-  }
-
-output = output + lspace + hash + `<br/>`;
-lspace = `&nbsp`;
-s = hold++;
-hold = hold++;
-h = h++
-}
-
-while (h < height) {
-  hash = hash + `#`;
-  output = output + hash + `<br/>`;
-  h = h++
-}
+ while(i <= height){
+  hold = '' 
+    for(let j = 0; j<=spaces,j++) {
+     hold =hold + '&nbsp;'; 
+    }
+   block = block +`#`;
+   space--;
+   code = code + hold + block + `</br>;
+   i++
+ }
 
 let p = document.getElementById('mario-easy-output');
-p.innerHTML= `<code>` + output + `</code>`;
+p.innerHTML= code + `</code>`;
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
