@@ -197,7 +197,35 @@ function credit() {
 function guess() {
 
   // WRITE YOUR EXERCISE 4 CODE HERE
-
+  
+  let answer = Math.floor(Math.random() * 1000) + 1;
+  let guess = prompt("Guess the number between 1 and 1,000");
+  while (guess < 0 || guess > 1,000 || NaN){
+  guess = prompt("Guess an Integer number between 1, and 1,000") 
+  }
+  
+  for(let g = 1; guess != answer; g++) { 
+    If (guess > answer){
+      guess = prompt("Your last guess was too high try again")
+      while (guess < 0 || guess > 1,000 || NaN){
+        guess = prompt("Please enter a vaild number") 
+    }
+  }else {
+    guess = prompt("Your last guess was too low try again")
+    while(guess < 0 || guess > 1,000 || NaN){
+      guess = prompt("Please enter a valid number") 
+     }
+  }
+  
+    let word = "guess" 
+    if (g > 1) {
+     word = "guesses" 
+    }
+    
+   let p =document.getElementById("hurricane-output")
+   p.innerHTML = `You guessed it Right in Just ${g} ${word}!` 
+    
+  
   ////////////////// DO NOT MODIFY
   check('guess'); // DO NOT MODIFY
   ////////////////// DO NOT MODIFY
