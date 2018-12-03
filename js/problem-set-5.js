@@ -97,18 +97,18 @@ height = Number(height);
 let i = 1;
 let block ='#'
 let space1 = height - 2;
-let space2 = `&nbsp` + `&nbsp` 
+let space2 = '&nbsp' + '&nbsp' 
 let code = "<code>"
 let hold
 
  while(i <= height){
   hold = '';
-   for(j = 0; j = space1;j++){
-    hold = hold + `&nbsp;`;
+   for(let j = 0; j = space1; j++){
+    hold = hold + '&nbsp';
    }
    space1 = space1 - 1;
    block = block +'#';
-   code = code + hold + block + space2 + block + `</br>`
+   code = code + hold + block + space2 + block + `</br>`;
    i++;
  }
    
