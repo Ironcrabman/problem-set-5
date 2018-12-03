@@ -212,7 +212,9 @@ function guess() {
   guess = prompt("Guess an Integer number between 1, and 1,000") 
   }
   
-  for(let g = 1; guess != answer; g++) { 
+  let g = 1
+  
+  while(guess != answer) { 
     if (guess > answer) {
       guess = prompt("Your last guess was too high try again");
       while (guess < 0 || guess > 1,000 || NaN){
@@ -224,6 +226,7 @@ function guess() {
       guess = prompt("Please enter a valid number") 
      }
   }
+  g++  
   }
   
   g = Number(g)
