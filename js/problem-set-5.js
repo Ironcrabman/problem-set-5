@@ -112,7 +112,7 @@ let hold
    i++;
  }
    
-let p = document.getElementById("mario-hard");
+let p = document.getElementById("mario-hard-output");
 p.innerHTML= code + "</code>";
   //////////////////////////////// DO NOT MODIFY
   check('mario-again', height); // DO NOT MODIFY
