@@ -95,7 +95,7 @@ function marioAgain() {
 
 height = Number(height); 
 let i = 1;
-let block =`#`;
+let block =`#`
 let space1 = height - 2;
 let space2 = `&nbsp` + `&nbsp` 
 let code = `<code>`
