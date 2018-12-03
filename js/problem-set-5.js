@@ -225,6 +225,8 @@ function guess() {
      }
   }
   }
+  
+  g = Number(g)
     let word = "guess" 
     if (g > 1) {
      word = "guesses" 
