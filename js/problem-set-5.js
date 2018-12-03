@@ -236,7 +236,7 @@ function guess() {
     }
     
    let p =document.getElementById("guess-output")
-   p.innerHTML =`You guessed it Right in Just ${g} ${word}!`
+   p.innerHTML =`You guessed it right in just ${g} ${word}!`
     
   
   ////////////////// DO NOT MODIFY
