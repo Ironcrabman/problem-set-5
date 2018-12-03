@@ -36,19 +36,19 @@ while (height < 1 || height > 23 || height % 1  != 0) {
 height = Number(height);
   
 let i = 1;
-let block = `#`;
+let block = '#';
 let space = height - 2;
 let hold
-let code = `<code>`
+let code = "<code>"
 
  while(i <= height){
   hold = '' 
     for(let j = 0; j<=spaces; j++) {
      hold =hold + '&nbsp;'; 
     }
-   block = block +`#`;
+   block = block +'#';
    space--;
-   code = code + hold + block + `</br>;
+   code = code + hold + block + "</br>";
    i++
  }
 
@@ -95,10 +95,10 @@ function marioAgain() {
 
 height = Number(height); 
 let i = 1;
-let block =`#`
+let block ='#'
 let space1 = height - 2;
 let space2 = `&nbsp` + `&nbsp` 
-let code = `<code>`
+let code = "<code>"
 let hold
 
  while(i <= height){
@@ -107,7 +107,7 @@ let hold
     hold = hold + `&nbsp;`;
    }
    space1 = space - 1;
-   block = block +`#`;
+   block = block +'#';
    code = code + hold + block + space2 + block + `</br>`
  }
    
