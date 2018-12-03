@@ -111,7 +111,7 @@ let hold
    code = code + hold + block + space2 + block + `</br>`
  }
    
-let p = document.getElementById('mario-hard');
+let p = document.getElementById("mario-hard");
 p.innerHTML= code + "</code>";
   //////////////////////////////// DO NOT MODIFY
   check('mario-again', height); // DO NOT MODIFY
@@ -217,20 +217,19 @@ function guess() {
       while (guess < 0 || guess > 1,000 || NaN){
         guess = prompt("Please enter a vaild number") 
       }
-    }
   }else {
     guess = prompt("Your last guess was too low try again")
     while(guess < 0 || guess > 1,000 || NaN){
       guess = prompt("Please enter a valid number") 
      }
   }
-  
+  }
     let word = "guess" 
     if (g > 1) {
      word = "guesses" 
     }
     
-   let p =document.getElementById("hurricane-output")
+   let p =document.getElementById("guess-output")
    p.innerHTML = `You guessed it Right in Just ${g} ${word}!` 
     
   
