@@ -103,7 +103,7 @@ let hold
 
  while(i <= height){
   hold = '';
-   for(let j = 0; j = space1; j++){
+   for(let j = 0; j <= space1; j++){
     hold = hold + '&nbsp';
    }
    space1 = space1 - 1;
