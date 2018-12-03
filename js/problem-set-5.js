@@ -43,7 +43,7 @@ let code = "<code>"
 
  while(i <= height){
   hold = '' 
-    for(let j = 0; j<=spaces; j++) {
+    for(let j = 0; j<=space; j++) {
      hold =hold + '&nbsp;'; 
     }
    block = block +'#';
