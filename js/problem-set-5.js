@@ -106,7 +106,7 @@ let hold
    for(j = 0; j = space1;j++){
     hold = hold + `&nbsp;`;
    }
-   space1 = space - 1;
+   space1 = space1 - 1;
    block = block +'#';
    code = code + hold + block + space2 + block + `</br>`
    i++;
