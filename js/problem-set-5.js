@@ -53,7 +53,7 @@ let code = `<code>`
  }
 
 let p = document.getElementById('mario-easy-output');
-p.innerHTML= code + `</code>`;
+p.innerHTML= code + "</code>";
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -88,6 +88,22 @@ function marioAgain() {
   ////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 2 CODE HERE
+
+  while (height < 1 || height > 23 || height % 1  != 0) {
+  height = prompt("Enter an integer from 1 to 23 for the height");
+}
+
+  height = Number(height);
+  
+let i = 1;
+let block = `#`;
+let space1 = height - 2;
+let space2 = `&nbsp` + `&nbsp` 
+let code = `<code>`
+let hold
+
+ while(i <= height){
+  hold = ''; 
 
   //////////////////////////////// DO NOT MODIFY
   check('mario-again', height); // DO NOT MODIFY
