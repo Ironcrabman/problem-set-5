@@ -212,12 +212,12 @@ function guess() {
   }
   
   for(let g = 1; guess != answer; g++) { 
-    If (guess > answer){
-      guess = prompt("Your last guess was too high try again")
+    if (guess > answer) {
+      guess = prompt("Your last guess was too high try again");
       while (guess < 0 || guess > 1,000 || NaN){
         guess = prompt("Please enter a vaild number") 
     }
-  }else {
+  } else {
     guess = prompt("Your last guess was too low try again")
     while(guess < 0 || guess > 1,000 || NaN){
       guess = prompt("Please enter a valid number") 
