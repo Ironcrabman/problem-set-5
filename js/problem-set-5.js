@@ -93,18 +93,26 @@ function marioAgain() {
   height = prompt("Enter an integer from 1 to 23 for the height");
 }
 
-  height = Number(height);
-  
+height = Number(height); 
 let i = 1;
-let block = `#`;
+let block =`#`;
 let space1 = height - 2;
 let space2 = `&nbsp` + `&nbsp` 
 let code = `<code>`
 let hold
 
  while(i <= height){
-  hold = ''; 
-
+  hold = '';
+   for(j = 0; j,= space1;j++){
+    hold = hold + `&nbsp;`;
+   }
+   space1 = space - 1;
+   block = block +`#`;
+   code = code + hold + block + space2 + block + `</br>`
+ }
+   
+let p = document.getElementById('mario-hard');
+p.innerHTML= code + "</code>";
   //////////////////////////////// DO NOT MODIFY
   check('mario-again', height); // DO NOT MODIFY
   //////////////////////////////// DO NOT MODIFY
