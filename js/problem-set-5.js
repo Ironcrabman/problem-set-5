@@ -109,6 +109,7 @@ let hold
    space1 = space - 1;
    block = block +'#';
    code = code + hold + block + space2 + block + `</br>`
+   i++;
  }
    
 let p = document.getElementById("mario-hard");
