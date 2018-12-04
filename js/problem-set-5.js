@@ -200,7 +200,7 @@ function credit() {
     i = i - 2;
   }
 
-  if (finalsum % 10 !=0) {
+  if ((finalsum % 10) == 0) {
     if ((card2.length) == 15) {
       pic = "<img src ='images/amex.png'/>";
     }else if ((card2.length) == 13) {
