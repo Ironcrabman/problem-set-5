@@ -167,6 +167,59 @@ function credit() {
 
   // WRITE YOUR EXERCISE 3 CODE HERE
 
+  card = prompt(`Please enter your credit card number`)
+  while (card % 1 !=0) {
+    card = prompt(`Please enter your credit card number`)
+  }
+ 
+  let card2 = card 
+  let i = card2.length - 2;
+  let value = "";
+  let finalsum = "";
+  let sum = "";
+  let pic
+  
+  while (i >= 0) {
+    value = 2 * Number(card2.charAt(i));
+    if (value >= 10) {
+      value = value.toString();
+      sum = Number(value.charAt(0)) + Number(value.charAt(1));
+     }else {
+      sum = value;
+     }
+    finalsum = Number(finalsum) + sum;
+    i = i - 2;
+  }
+
+  i = ((card2.length) - 1);
+
+  while (i >= 0) {
+    value = Number(card2.charAt(i));
+    sum = value;
+    finalsum = Number(finalsum) + sum;
+    i = i - 2;
+  }
+
+  if (finalsum % 10 !=0) {
+    if (card2.length == 15) {
+      pic = "<img src ='images/amex.png'/>";
+    }else if (card2.length == 13) {
+      pic = "<img src ='images/visa.png'/>";
+    }else if (card2.length == 16) {
+      if(card2.charAt(0) == "4") {
+        pic = "<img src ='images/visa.png'/>"
+      }else {
+      pic = "<img src ='images/mastercard.png'/>";
+      }
+  }else {
+    pic = "<img src ='images/invalid.png'/>";
+  }
+  
+let p = document.getElementById("credit-output");
+p.innerHTML= pic
+        
+ card = Number(card); 
+  
   /*
    * NOTE: After reading in the card number and storing it in the 'card'
    *       variable, do not modify it. If you find it necessary to manipulate
