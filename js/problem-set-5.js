@@ -173,7 +173,7 @@ function credit() {
   }
  
   let card2 = card 
-  let i = card2.length - 2;
+  let i = (card2.length) - 2;
   let value = "";
   let finalsum = "";
   let sum = "";
@@ -201,11 +201,11 @@ function credit() {
   }
 
   if (finalsum % 10 !=0) {
-    if (card2.length == 15) {
+    if ((card2.length) == 15) {
       pic = "<img src ='images/amex.png'/>";
-    }else if (card2.length == 13) {
+    }else if ((card2.length) == 13) {
       pic = "<img src ='images/visa.png'/>";
-    }else if (card2.length == 16) {
+    }else if ((card2.length) == 16) {
       if(card2.charAt(0) == "4") {
         pic = "<img src ='images/visa.png'/>"
       }else {
