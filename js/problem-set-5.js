@@ -211,6 +211,7 @@ function credit() {
       }else {
       pic = "<img src ='images/mastercard.png'/>";
       }
+    }
   }else {
     pic = "<img src ='images/invalid.png'/>";
   }
